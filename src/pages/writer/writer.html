@@ -1,0 +1,19 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>AUTHOR</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-slides autoplay="5000" loop="true" speed="3000">
+
+  <ion-slide *ngFor="let image of imageArray">
+    <img src="{{image.image}}" width="500" height="500" />
+  </ion-slide>
+
+</ion-slides>
+</ion-content>

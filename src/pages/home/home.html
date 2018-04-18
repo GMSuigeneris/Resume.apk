@@ -1,18 +1,32 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
+  <ion-navbar color="dark">
+    <ion-title>AKINFOLARIN</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <ion-slides loop autoplay="5000" speed="3000" centeredSlides id="wrap">
+      <ion-slide *ngFor="let image of imageArray" class="slide">
+          <img src="{{image.image}}" width="500" height="500" />
+          <p  class="slides" text-wrap>{{image.quote}}</p>
+        </ion-slide>
+  </ion-slides>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <button ion-button full  class="btn" (click)="login('facebook')">CONNECT WITH  &nbsp;<ion-icon name="logo-facebook"></ion-icon></button>
+  <button ion-button full  class="btn" (click)="login('twitter')">CONNECT WITH &nbsp;<ion-icon name="logo-twitter"></ion-icon></button>
+  <button ion-button full class="btn" (click)="loginWithLinkedin('linkedin')">CONNECT WITH &nbsp;<ion-icon name="logo-linkedin"></ion-icon></button>    
+  <button ion-button full class="btn" (click)="login('google')">CONNECT WITH &nbsp;<ion-icon name="logo-google"></ion-icon></button>
 </ion-content>
+<ion-footer id="footer">
+  <p text-center><b>&copy; AKINFOLARIN's 2018</b></p>
+</ion-footer>
+
+
+
+
+
+
+
+
+
